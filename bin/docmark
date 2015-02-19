@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var read    = require('read-file-stdin')
+var write   = require('write-file-stdout')
+var meow    = require('meow')
+var docmark = require('../')
+
+var cli = meow({
+  pkg: '../package.json',
+  help: [
+    'Usage:',
+    '  docmark <input> <output>'
+  ].join('\n')
+})
+
+read(cli.input[0], function(err, buffer) {
+  if (err) throw err
+  var doc = docmark(buffer.toString())
+  write(cli.input[1], doc)
+})

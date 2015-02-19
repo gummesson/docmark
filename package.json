@@ -1,0 +1,38 @@
+{
+  "name": "docmark",
+  "version": "1.0.0",
+  "description": "Extract Markdown content from doc comments.",
+  "main": "index.js",
+  "bin": {
+    "docmark": "bin/docmark"
+  },
+  "scripts": {
+    "test": "node test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gummesson/docmark.git"
+  },
+  "keywords": [
+    "markdown",
+    "comment",
+    "comments",
+    "documentation"
+  ],
+  "author": "Ellen Gummesson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gummesson/docmark/issues"
+  },
+  "homepage": "https://github.com/gummesson/docmark",
+  "dependencies": {
+    "extract-comments": "^0.4.2",
+    "looping": "^1.1.2",
+    "meow": "^3.0.0",
+    "read-file-stdin": "^0.2.0",
+    "write-file-stdout": "0.0.2"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0"
+  }
+}
